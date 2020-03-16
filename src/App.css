@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.choice-card {
+  margin: 10px;
+  width: 800px;
+  height: 800px;
+  border: 1px solid black;
+  background-color: white;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  font-size:20pt
+ 
+}
+
+
+.red {
+  background-color: red;
+}
+
+.white {
+  background-color: white;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.winner{
+ border:10px solid green;
+ color:green;
+}
+.loser{
+  border:10px solid red;
+  color:red;
+}
+.tie {
+  border:10px solid black;
+  color:black;
+}
+
+img {
+  height: 500px;
+  width: auto;
+  
+  
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+}
+
+.nav{
+  width: 100%;
+  height: 4rem;
+  background-color: #563d7c;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top:10px
+    
+}
+
+.nav-style{
+  padding-right: .5rem;
+  padding-left: .5rem;
+  color: #cbbde2;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nav-container{
+ margin-left :30px
+}
+i{
+  margin: 10px
+}
