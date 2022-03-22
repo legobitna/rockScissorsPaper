@@ -10,7 +10,7 @@ const CHOICES = {
   },
   paper: {
     name: "paper",
-    url: "http://pngimagesfree.com/Paper/Thumb/blank-note-paper-free-clipa.png",
+    url: "https://www.collinsdictionary.com/images/full/paper_111691001.jpg",
   },
   rock: {
     name: "rock",
