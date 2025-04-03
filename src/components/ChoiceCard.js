@@ -1,4 +1,5 @@
 import React from "react";
+import initialImage from "../assets/initialImage.jpg";
 
 export default function ChoiceCard(props) {
   let result;
@@ -17,11 +18,13 @@ export default function ChoiceCard(props) {
         ? "loser"
         : "tie";
   }
+  const imageSrc = props.imgURL ? props.imgURL : initialImage;
+
   return (
     <div className={`choice-card ${result}`}>
       <h1>{props.title}</h1>
-      <img src={props.imgURL} />
-      <h3>{result.toUpperCase()}</h3>
+      <img src={imageSrc} />
+      <h3>{props.winner && result.toUpperCase()}</h3>
     </div>
   );
 }

@@ -18,26 +18,26 @@ const CHOICES = {
   },
 };
 
-const judgement = (uChoice, cChoice) => {
-  if (uChoice === cChoice) return "TIE";
-  else if (uChoice === "rock") return cChoice === "scissors" ? "WIN" : "LOSE";
-  else if (uChoice === "scissors") return cChoice === "paper" ? "WIN" : "LOSE";
-  else if (uChoice === "paper") return cChoice === "rock" ? "WIN" : "LOSE";
-};
-
-const randomChoice = () => {
-  const keys = Object.keys(CHOICES);
-  const randomNum = Math.floor(Math.random() * keys.length);
-  const randomName = keys[randomNum];
-
-  return CHOICES[randomName];
-};
-
 function App() {
   const [userChoice, setUserChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [result, setResult] = useState(null);
 
+  const judgement = (uChoice, cChoice) => {
+    if (uChoice === cChoice) return "TIE";
+    else if (uChoice === "rock") return cChoice === "scissors" ? "WIN" : "LOSE";
+    else if (uChoice === "scissors")
+      return cChoice === "paper" ? "WIN" : "LOSE";
+    else if (uChoice === "paper") return cChoice === "rock" ? "WIN" : "LOSE";
+  };
+
+  const randomChoice = () => {
+    const keys = Object.keys(CHOICES);
+    const randomNum = Math.floor(Math.random() * keys.length);
+    const randomName = keys[randomNum];
+
+    return CHOICES[randomName];
+  };
   const onplay = (value) => {
     setUserChoice(CHOICES[value]);
     let a = randomChoice();
@@ -47,7 +47,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <div className="board">
         <ChoiceCard
           title="you"
